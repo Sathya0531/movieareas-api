@@ -2,6 +2,7 @@ import express from "express";
 import {
   MovieCreate,
   MovieDelete,
+  MovieDetail,
   MovieIndex,
   MovieUpdate,
 } from "../controllers/movies.controllers.js";
@@ -23,6 +24,9 @@ router.post("/", MovieCreate);
 
 // u- update
 router.put("/:id", MovieUpdate);
+
+// u- show
+router.get("/:id", MovieDetail);
 
 // d- delete
 router.delete("/:id", MovieDelete);
